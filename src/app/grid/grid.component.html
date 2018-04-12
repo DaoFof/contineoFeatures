@@ -1,19 +1,21 @@
-<blockquote>Please click on a row</blockquote>
+<div class="container">
+  <blockquote>Please click on a row</blockquote>
 <p class="text-danger">You clicked on: <strong>{{ message }}</strong></p>
 <br />
-<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+<table class="table table-striped table-bordered" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" >
   <thead>
-    <tr>
-      <th>ID</th>
-      <th>First name</th>
-      <th>Last name</th>
+    <tr >
+      <th class="text-center">ID</th>
+      <th class="text-center">First name</th>
+      <th class="text-center">Last name</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let person of persons">
+    <tr class="text-center" *ngFor="let person of persons">
       <td>{{ person.id }}</td>
       <td>{{ person.firstName }}</td>
       <td>{{ person.lastName }}</td>
     </tr>
   </tbody>
-  </table>
+</table>
+</div>

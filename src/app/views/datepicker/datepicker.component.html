@@ -1,0 +1,49 @@
+<div class="col-lg-5">
+  <div class="ibox float-e-margins">
+      <div class="ibox-title">
+          <h5>Date picker <small>https://ng-bootstrap.github.io/#/getting-started</small></h5>
+          <div class="ibox-tools">
+              <a class="collapse-link">
+                  <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-wrench"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                  <li><a href="#">Config option 1</a>
+                  </li>
+                  <li><a href="#">Config option 2</a>
+                  </li>
+              </ul>
+              <a class="close-link">
+                  <i class="fa fa-times"></i>
+              </a>
+          </div>
+      </div>
+      <div class="ibox-content">
+          <div class="row">
+          <h3>Simple datepicker</h3>
+
+          <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+          <hr>
+
+          <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Select Today</button>
+          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo()">To current month</button>
+          <button class="btn btn-sm btn-outline-primary" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+
+          <hr>
+
+          <pre>Month: {{ date.month }}.{{ date.year }}</pre>
+          <pre>Model: {{ model | json }}</pre>
+          </div>
+          <div class="row">
+              <h3>Datepicker in a popup</h3>
+              <app-date-picker-pop-up></app-date-picker-pop-up>
+          </div>
+          <div class="row">
+            <h3> Date picker with range</h3>
+            <app-date-picker-range></app-date-picker-range>
+          </div>
+      </div>
+  </div>
+</div>

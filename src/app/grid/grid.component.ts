@@ -77,6 +77,8 @@ export class GridComponent implements OnInit {
         });
         return row;
       },
+      pageLength: 5,
+      
        
     };
 

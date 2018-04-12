@@ -1,0 +1,43 @@
+<div class="col-lg-7">
+  <div class="ibox float-e-margins">
+      <div class="ibox-title">
+          <h5>Time Picker<small>https://owsolutions.github.io/amazing-time-picker/</small></h5>
+          <div class="ibox-tools">
+              <a class="collapse-link">
+                  <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-wrench"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                  <li><a href="#">Config option 1</a>
+                  </li>
+                  <li><a href="#">Config option 2</a>
+                  </li>
+              </ul>
+              <a class="close-link">
+                  <i class="fa fa-times"></i>
+              </a>
+          </div>
+      </div>
+      <div class="ibox-content">
+         <form [formGroup]="myForm">
+        <ng-multiselect-dropdown
+            name="city"
+            [placeholder]="'Select City'"
+            [data]="cities"
+            formControlName="city"
+            [disabled]="disabled"
+            [settings]="dropdownSettings"
+            (onSelect)="onItemSelect($event)">
+        </ng-multiselect-dropdown>
+        <div class="checkbox">
+            <input type="checkbox" (click)="disabled =!disabled" name="" class="" id="">Disabled
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" (click)="toggleCloseDropdownSelection()" name="" class="" id="">Close on select
+        </div>
+   </form>
+      </div>
+  </div>
+</div>

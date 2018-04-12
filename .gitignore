@@ -42,3 +42,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+"../node_modules/datatables.net-dt/css/jquery.dataTables.css", from angular-cli-json style part for dataTables basic style
